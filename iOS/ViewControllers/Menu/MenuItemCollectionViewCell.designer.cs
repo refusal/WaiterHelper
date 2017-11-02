@@ -9,10 +9,10 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace WaiterHelper.iOS.ViewControllers
+namespace WaiterHelper.iOS.ViewControllers.Menu
 {
-    [Register("MenuViewController")]
-    partial class MenuViewController
+    [Register("MenuItemCollectionViewCell")]
+    partial class MenuItemCollectionViewCell
     {
         void ReleaseDesignerOutlets()
         {

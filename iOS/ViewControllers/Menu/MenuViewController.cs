@@ -2,19 +2,20 @@
 using UIKit;
 using MvvmCross.iOS.Views;
 using WaiterHelper.ViewModels;
+using MvvmCross.iOS.Views.Presenters.Attributes;
+using MvvmCross.Plugins.Color.iOS;
 
 namespace WaiterHelper.iOS.ViewControllers
 {
-    public partial class MenuViewController : MvxViewController<MenuViewModel>
+    [MvxFromStoryboard("Menu")]
+    [MvxRootPresentation(WrapInNavigationController = true)]
+    public partial class MenuViewController : ViewControllerBase<MenuViewModel>
     {
-        public MenuViewController() : base("MenuViewController", null)
-        {
-        }
+        public MenuViewController(IntPtr handle) : base(handle) { }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            // Perform any additional setup after loading the view, typically from a nib.
         }
 
         public override void DidReceiveMemoryWarning()
