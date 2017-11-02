@@ -9,22 +9,13 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace WaiterHelper.iOS
+namespace WaiterHelper.iOS.ViewControllers
 {
-    [Register("ItemsViewController")]
-    partial class BrowseViewController
+    [Register("MenuViewController")]
+    partial class MenuViewController
     {
-        [Outlet]
-        [GeneratedCode("iOS Designer", "1.0")]
-        UIKit.UIButton btnAddItem { get; set; }
-
         void ReleaseDesignerOutlets()
         {
-            if (btnAddItem != null)
-            {
-                btnAddItem.Dispose();
-                btnAddItem = null;
-            }
         }
     }
 }
