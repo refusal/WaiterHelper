@@ -184,6 +184,10 @@
     <Compile Include="ViewControllers\Tables\TablesCollectionViewController.designer.cs">
       <DependentUpon>TablesCollectionViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewControllers\Settings\SettingsViewController.cs" />
+    <Compile Include="ViewControllers\Settings\SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -194,6 +198,7 @@
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="ViewControllers\Menu\Menu.storyboard" />
     <InterfaceDefinition Include="ViewControllers\Tables\Tables.storyboard" />
+    <InterfaceDefinition Include="ViewControllers\Settings\Settings.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewControllers\Menu\" />
@@ -201,6 +206,7 @@
     <Folder Include="ViewControllers\Tables\" />
     <Folder Include="Assets.xcassets\TablesTab.imageset\" />
     <Folder Include="Assets.xcassets\MenuTab.imageset\" />
+    <Folder Include="ViewControllers\Settings\" />
   </ItemGroup>
   <Import Project="..\WaiterHelper\WaiterHelper.projitems" Label="Shared" Condition="Exists('..\WaiterHelper\WaiterHelper.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

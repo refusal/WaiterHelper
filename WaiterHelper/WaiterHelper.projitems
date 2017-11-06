@@ -20,6 +20,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ViewModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\MvxViewModelLoaderExtension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TablesCollectionViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

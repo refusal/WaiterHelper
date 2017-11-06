@@ -28,6 +28,7 @@ namespace WaiterHelper.iOS.ViewControllers
             {
                 CreateTabFor("Tables","TablesTab",this.ViewModel.TablesCollectionViewModel),
                 CreateTabFor("Menu" ,"MenuTab", this.ViewModel.MenuViewModel),
+                CreateTabFor("Settings" ,"MenuTab", this.ViewModel.SettingsViewModel),
             };
 
             ViewControllers = viewControllers;
