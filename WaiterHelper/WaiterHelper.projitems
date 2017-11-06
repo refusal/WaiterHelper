@@ -16,6 +16,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)AppStart.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MenuItemViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AppTheme.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HomeRootViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ViewModelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\MvxViewModelLoaderExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TablesCollectionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

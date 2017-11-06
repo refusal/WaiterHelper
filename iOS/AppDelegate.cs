@@ -2,6 +2,7 @@
 using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
 using MvvmCross.Platform;
+using MvvmCross.Plugins.Color.iOS;
 using UIKit;
 
 namespace WaiterHelper.iOS
@@ -11,7 +12,7 @@ namespace WaiterHelper.iOS
     [Register("AppDelegate")]
     public class AppDelegate : MvxApplicationDelegate
     {
-        // class-level declarations
+        private static readonly NSString statusBarKey = new NSString("statusBar");
 
         public override UIWindow Window
         {
@@ -29,6 +30,9 @@ namespace WaiterHelper.iOS
 
             var startup = Mvx.Resolve<IMvxAppStart>();
             startup.Start();
+
+            if (UIApplication.SharedApplication.ValueForKey(statusBarKey) is UIView statusBar)
+                statusBar.BackgroundColor = AppTheme.ColorAccent.ToNativeColor();
 
             Window.MakeKeyAndVisible();
             return true;

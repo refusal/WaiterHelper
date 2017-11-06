@@ -129,12 +129,41 @@
     <Reference Include="MvvmCross.Plugins.Color.iOS">
       <HintPath>..\packages\MvvmCross.Plugin.Color.5.4.0\lib\Xamarin.iOS10\MvvmCross.Plugins.Color.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\Xamarin.iOS10\Cirrious.CrossCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore.Touch">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\Xamarin.iOS10\Cirrious.CrossCore.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\Xamarin.iOS10\Cirrious.MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\Xamarin.iOS10\Cirrious.MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Chance.MvvmCross.Plugins.UserInteraction">
+      <HintPath>..\packages\Chance.MvvmCross.Plugins.UserInteraction.1.1.4\lib\Xamarin.iOS10\Chance.MvvmCross.Plugins.UserInteraction.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
     <ImageAsset Include="Assets.xcassets\DishPlaceholder.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\DishPlaceholder.imageset\dish-img-placeholder-c16ed7ba04c396bc1f3f9172b33f8e410e1c6e6788503063631e00f70392d7d4.png" />
+    <ImageAsset Include="Assets.xcassets\TablesTab.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TablesTab.imageset\restaurant-table-and-chairs.png" />
+    <ImageAsset Include="Assets.xcassets\MenuTab.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\MenuTab.imageset\restaurant-cutlery-symbol-of-a-cross.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Image.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\waiter-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\waiter-2 2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\waiter-2 5.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\waiter-2 4.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\waiter-2 6.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\waiter-2 7.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\waiter-2 8.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\waiter-2 9.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\waiter-2 10.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
@@ -150,6 +179,11 @@
       <DependentUpon>MenuItemCollectionViewCell.cs</DependentUpon>
     </Compile>
     <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
+    <Compile Include="ViewControllers\HomeRootViewController.cs" />
+    <Compile Include="ViewControllers\Tables\TablesCollectionViewController.cs" />
+    <Compile Include="ViewControllers\Tables\TablesCollectionViewController.designer.cs">
+      <DependentUpon>TablesCollectionViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -159,10 +193,14 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="ViewControllers\Menu\Menu.storyboard" />
+    <InterfaceDefinition Include="ViewControllers\Tables\Tables.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewControllers\Menu\" />
     <Folder Include="Assets.xcassets\DishPlaceholder.imageset\" />
+    <Folder Include="ViewControllers\Tables\" />
+    <Folder Include="Assets.xcassets\TablesTab.imageset\" />
+    <Folder Include="Assets.xcassets\MenuTab.imageset\" />
   </ItemGroup>
   <Import Project="..\WaiterHelper\WaiterHelper.projitems" Label="Shared" Condition="Exists('..\WaiterHelper\WaiterHelper.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

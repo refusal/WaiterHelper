@@ -16,7 +16,7 @@ namespace WaiterHelper
 
         public async void Start(object hint = null)
         {
-            await navigationService.Navigate<MenuViewModel>();
+            await navigationService.Navigate<HomeRootViewModel>();
         }
     }
 }
