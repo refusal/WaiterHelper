@@ -3,6 +3,7 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.Core.Navigation;
 using WaiterHelper.Helpers;
 using System.Threading.Tasks;
+using WaiterHelper.ViewModels.Tables;
 
 namespace WaiterHelper.ViewModels
 {

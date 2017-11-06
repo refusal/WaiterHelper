@@ -11,7 +11,7 @@ using WaiterHelper.ViewModels;
 
 namespace WaiterHelper.iOS.ViewControllers
 {
-    [MvxRootPresentation(WrapInNavigationController = true)]
+    [MvxRootPresentation(WrapInNavigationController = false)]
     public class HomeRootViewController : MvxTabBarViewController<HomeRootViewModel>
     {
         private int createdSoFarCount;

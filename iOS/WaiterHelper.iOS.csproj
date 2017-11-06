@@ -188,6 +188,10 @@
     <Compile Include="ViewControllers\Settings\SettingsViewController.designer.cs">
       <DependentUpon>SettingsViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewControllers\Tables\TableItemCollectionViewCell.cs" />
+    <Compile Include="ViewControllers\Tables\TableItemCollectionViewCell.designer.cs">
+      <DependentUpon>TableItemCollectionViewCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />

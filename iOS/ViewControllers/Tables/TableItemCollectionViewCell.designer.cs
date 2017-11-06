@@ -7,19 +7,19 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace WaiterHelper.iOS.ViewControllers
+namespace WaiterHelper.iOS.ViewControllers.Tables
 {
-	[Register ("TablesCollectionViewController")]
-	partial class TablesCollectionViewController
+	[Register ("TableItemCollectionViewCell")]
+	partial class TableItemCollectionViewCell
 	{
 		[Outlet]
-		UIKit.UICollectionView TablesCollectionView { get; set; }
+		UIKit.UIButton AddOrderButton { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (TablesCollectionView != null) {
-				TablesCollectionView.Dispose ();
-				TablesCollectionView = null;
+			if (AddOrderButton != null) {
+				AddOrderButton.Dispose ();
+				AddOrderButton = null;
 			}
 		}
 	}

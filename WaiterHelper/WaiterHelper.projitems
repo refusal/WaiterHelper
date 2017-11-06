@@ -19,11 +19,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HomeRootViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ViewModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\MvxViewModelLoaderExtension.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TablesCollectionViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Tables\TablesCollectionViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Tables\TableItemViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Tables\" />
   </ItemGroup>
 </Project>

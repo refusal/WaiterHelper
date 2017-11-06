@@ -8,7 +8,7 @@ using WaiterHelper.ViewModels;
 namespace WaiterHelper.iOS.ViewControllers.Settings
 {
     [MvxFromStoryboard("Settings")]
-    [MvxTabPresentation(WrapInNavigationController = true)]
+    [MvxTabPresentation(WrapInNavigationController = false)]
     public partial class SettingsViewController : MvxViewController<SettingsViewModel>
     {
         public SettingsViewController(IntPtr handle) : base(handle)
