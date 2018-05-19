@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad10_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Pop Up Control-->
+        <scene sceneID="uok-p4-Ed5">
+            <objects>
+                <viewController storyboardIdentifier="SearchPopUpControl" id="NgM-dG-x7R" customClass="SearchPopUpControl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WHb-EJ-1ua"/>
+                        <viewControllerLayoutGuide type="bottom" id="dlW-0g-wyf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rql-NP-JnG">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BLa-g3-vdT" customClass="TouchDrawingImageView">
+                                <rect key="frame" x="0.0" y="20" width="1112" height="750"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRL-dM-eoe">
+                                <rect key="frame" x="16" y="786" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cP-aj-FEv">
+                                <rect key="frame" x="1050" y="786" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8cP-aj-FEv" firstAttribute="top" secondItem="BLa-g3-vdT" secondAttribute="bottom" constant="16" id="0F8-jo-RE8"/>
+                            <constraint firstItem="WRL-dM-eoe" firstAttribute="leading" secondItem="Rql-NP-JnG" secondAttribute="leading" constant="16" id="BLX-XB-Hnu"/>
+                            <constraint firstItem="dlW-0g-wyf" firstAttribute="top" secondItem="BLa-g3-vdT" secondAttribute="bottom" constant="64" id="QU0-SZ-GuD"/>
+                            <constraint firstAttribute="trailing" secondItem="BLa-g3-vdT" secondAttribute="trailing" id="Ume-2l-Hre"/>
+                            <constraint firstItem="WRL-dM-eoe" firstAttribute="top" secondItem="BLa-g3-vdT" secondAttribute="bottom" constant="16" id="cU1-tf-daf"/>
+                            <constraint firstAttribute="trailing" secondItem="8cP-aj-FEv" secondAttribute="trailing" constant="16" id="fut-Jy-GVI"/>
+                            <constraint firstItem="BLa-g3-vdT" firstAttribute="leading" secondItem="Rql-NP-JnG" secondAttribute="leading" id="xzX-xn-6eW"/>
+                            <constraint firstItem="BLa-g3-vdT" firstAttribute="top" secondItem="WHb-EJ-1ua" secondAttribute="bottom" id="z35-Q0-vCP"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="800" height="600"/>
+                    <connections>
+                        <outlet property="DrawingImage" destination="BLa-g3-vdT" id="oIY-tk-g1U"/>
+                        <outlet property="ResultTextLabel" destination="WRL-dM-eoe" id="aRQ-7q-ORs"/>
+                        <outlet property="SearchButton" destination="8cP-aj-FEv" id="nvV-gz-vEd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RW9-9d-sy4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1074" y="175"/>
+        </scene>
+    </scenes>
+</document>

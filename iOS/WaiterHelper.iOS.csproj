@@ -105,9 +105,6 @@
     <Reference Include="MvvmCross.Platform.iOS">
       <HintPath>..\packages\MvvmCross.Platform.5.4.0\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Core">
-      <HintPath>..\packages\MvvmCross.Core.5.4.0\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
-    </Reference>
     <Reference Include="MvvmCross.iOS">
       <HintPath>..\packages\MvvmCross.Core.5.4.0\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
     </Reference>
@@ -143,6 +140,12 @@
     </Reference>
     <Reference Include="Chance.MvvmCross.Plugins.UserInteraction">
       <HintPath>..\packages\Chance.MvvmCross.Plugins.UserInteraction.1.1.4\lib\Xamarin.iOS10\Chance.MvvmCross.Plugins.UserInteraction.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\packages\MvvmCross.Core.5.4.0\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.FluentLayouts.Touch">
+      <HintPath>..\packages\Cirrious.FluentLayout.2.6.0\lib\Xamarin.iOS10\Cirrious.FluentLayouts.Touch.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -192,6 +195,24 @@
     <Compile Include="ViewControllers\Tables\TableItemCollectionViewCell.designer.cs">
       <DependentUpon>TableItemCollectionViewCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\TouchDrawingImageView.cs" />
+    <Compile Include="ViewControllers\SearchPopUpControl.cs" />
+    <Compile Include="ViewControllers\SearchPopUpControl.designer.cs">
+      <DependentUpon>SearchPopUpControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\MvxModalAutoSizePresentationAttribute.cs" />
+    <Compile Include="Presentation\ViewPresenter.cs" />
+    <Compile Include="Presentation\ModalPresentationController.cs" />
+    <Compile Include="Presentation\TransitioningDelegateAtCenter.cs" />
+    <Compile Include="Presentation\TransitioningDelegateAtLocation.cs" />
+    <Compile Include="Presentation\Transition\AnimatedTransitioningAtLocation.cs" />
+    <Compile Include="Presentation\CustomSplitViewController.cs" />
+    <Compile Include="Presentation\CustomSplitViewController.designer.cs" />
+    <Compile Include="Common\UIViewControllerExtensions.cs" />
+    <Compile Include="Presentation\MvxCustomMasterPresentationAttribute.cs" />
+    <Compile Include="Presentation\MvxDetailCustomPresentationAttribute.cs" />
+    <Compile Include="Presentation\MvxRootChildPresentationAttribute.cs" />
+    <Compile Include="Common\TouchDrawingImageViewBinding.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -203,6 +224,8 @@
     <InterfaceDefinition Include="ViewControllers\Menu\Menu.storyboard" />
     <InterfaceDefinition Include="ViewControllers\Tables\Tables.storyboard" />
     <InterfaceDefinition Include="ViewControllers\Settings\Settings.storyboard" />
+    <InterfaceDefinition Include="Presentation\CustomSplitViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\Search.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewControllers\Menu\" />
@@ -211,6 +234,10 @@
     <Folder Include="Assets.xcassets\TablesTab.imageset\" />
     <Folder Include="Assets.xcassets\MenuTab.imageset\" />
     <Folder Include="ViewControllers\Settings\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Presentation\" />
+    <Folder Include="Presentation\Transition\" />
+    <Folder Include="Common\" />
   </ItemGroup>
   <Import Project="..\WaiterHelper\WaiterHelper.projitems" Label="Shared" Condition="Exists('..\WaiterHelper\WaiterHelper.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

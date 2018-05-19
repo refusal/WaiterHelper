@@ -22,6 +22,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Tables\TablesCollectionViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Tables\TableItemViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SearchViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\RecognizerService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ApiClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IApiConnection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IRecognizerService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Consts.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ResponceRecognizeModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\HttpApiConnection.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

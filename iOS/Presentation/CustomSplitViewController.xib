@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomSplitViewController">
+            <connections>
+                <outlet property="DetailView" destination="b7K-3t-YHR" id="name-outlet-b7K-3t-YHR"/>
+                <outlet property="EmptyTextLabel" destination="Yxi-N1-2T4" id="olh-gn-4KC"/>
+                <outlet property="MasterView" destination="8lp-fY-e13" id="name-outlet-8lp-fY-e13"/>
+                <outlet property="MasterWidthConstraint" destination="Mpj-B4-UTs" id="name-outlet-Mpj-B4-UTs"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7K-3t-YHR">
+                    <rect key="frame" x="321" y="0.0" width="1045" height="1024"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a patient to show details, please." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxi-N1-2T4">
+                            <rect key="frame" x="371.5" y="501.5" width="302" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.73725490199999999" green="0.73333333329999995" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Yxi-N1-2T4" firstAttribute="centerX" secondItem="b7K-3t-YHR" secondAttribute="centerX" id="JEm-us-u4M"/>
+                        <constraint firstItem="Yxi-N1-2T4" firstAttribute="centerY" secondItem="b7K-3t-YHR" secondAttribute="centerY" id="fNV-Yg-bDQ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lp-fY-e13">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="1024"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="Mpj-B4-UTs"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaQ-hL-qiC">
+                    <rect key="frame" x="320" y="0.0" width="1" height="1366"/>
+                    <color key="backgroundColor" red="0.83529411760000005" green="0.85098039219999999" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1366" id="3uY-hg-2Iu"/>
+                        <constraint firstAttribute="width" constant="1" id="Xa9-DR-Hcr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="FaQ-hL-qiC" firstAttribute="leading" secondItem="8lp-fY-e13" secondAttribute="trailing" id="8vg-bY-4qU"/>
+                <constraint firstAttribute="bottom" secondItem="b7K-3t-YHR" secondAttribute="bottom" id="SZM-MN-oCb"/>
+                <constraint firstAttribute="trailing" secondItem="b7K-3t-YHR" secondAttribute="trailing" id="UH7-O4-JG6"/>
+                <constraint firstItem="b7K-3t-YHR" firstAttribute="leading" secondItem="8lp-fY-e13" secondAttribute="trailing" constant="1" id="Vxe-W8-pdZ"/>
+                <constraint firstItem="8lp-fY-e13" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="X4V-RQ-xdM"/>
+                <constraint firstItem="8lp-fY-e13" firstAttribute="top" secondItem="2" secondAttribute="top" id="bB4-n1-NQO"/>
+                <constraint firstItem="b7K-3t-YHR" firstAttribute="top" secondItem="2" secondAttribute="top" id="c5A-ix-B9z"/>
+                <constraint firstAttribute="bottom" secondItem="FaQ-hL-qiC" secondAttribute="bottom" id="dQa-Io-YTk"/>
+                <constraint firstItem="FaQ-hL-qiC" firstAttribute="top" secondItem="2" secondAttribute="top" id="gzl-yM-cyt"/>
+                <constraint firstAttribute="bottom" secondItem="8lp-fY-e13" secondAttribute="bottom" id="oFm-fc-1kD"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

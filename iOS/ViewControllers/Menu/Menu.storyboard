@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -106,6 +106,10 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjh-pa-u3I">
+                                <rect key="frame" x="489" y="369" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -113,8 +117,14 @@
                             <constraint firstItem="SR9-Uj-XkH" firstAttribute="top" secondItem="jn5-Ny-74y" secondAttribute="bottom" id="Hw2-te-IGN"/>
                             <constraint firstAttribute="trailing" secondItem="jn5-Ny-74y" secondAttribute="trailing" id="JCR-kT-xPz"/>
                             <constraint firstItem="jn5-Ny-74y" firstAttribute="top" secondItem="ILH-ok-rGU" secondAttribute="bottom" id="SR5-ve-6fb"/>
+                            <constraint firstItem="Zjh-pa-u3I" firstAttribute="centerX" secondItem="Q6c-Mt-bho" secondAttribute="centerX" id="qAM-ts-8tM"/>
+                            <constraint firstItem="Zjh-pa-u3I" firstAttribute="centerY" secondItem="Q6c-Mt-bho" secondAttribute="centerY" id="vgH-Sv-IWl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="MenuCollectionView" destination="jn5-Ny-74y" id="Q9s-oW-5Ap"/>
+                        <outlet property="TestButton" destination="Zjh-pa-u3I" id="GDR-q0-CGF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smD-Kw-2Ty" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

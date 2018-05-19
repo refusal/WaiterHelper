@@ -14,9 +14,17 @@ namespace WaiterHelper.iOS.ViewControllers
 	{
 		[Outlet]
 		UIKit.UICollectionView MenuCollectionView { get; set; }
+
+		[Outlet]
+		UIKit.UIButton TestButton { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (TestButton != null) {
+				TestButton.Dispose ();
+				TestButton = null;
+			}
+
 			if (MenuCollectionView != null) {
 				MenuCollectionView.Dispose ();
 				MenuCollectionView = null;
