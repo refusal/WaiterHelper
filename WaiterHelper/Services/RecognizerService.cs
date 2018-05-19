@@ -16,31 +16,31 @@ namespace WaiterHelper.Services
 
         public async Task<string> RecognizeHandWrittenText(byte[] array)
         {
-            if (array?.Count() == 0)
-                return null;
-
-            string requestParameters = "?handwriting=true";
-            string uri = Consts.UriBase + "?" + requestParameters;
-
-            HttpResponseMessage response;
-
-            using (ByteArrayContent content = new ByteArrayContent(array))
+            try
             {
-                // This example uses content type "application/octet-stream".
-                // The other content types you can use are "application/json"
-                // and "multipart/form-data".
-                content.Headers.ContentType =
-                    new MediaTypeHeaderValue("application/octet-stream");
+                HttpClient client = new HttpClient();
 
-                // The first REST call starts the async process to analyze the
-                // written text in the image.
-                response = await ApiConnection.PostAsync<HttpResponseMessage>(uri, content);
+                client.DefaultRequestHeaders.Add(
+                    "Ocp-Apim-Subscription-Key", Consts.SubscriptionKey);
+
+                string requestParameters = "mode=Handwritten";
+
+                string uri = Consts.UriBase + "?" + requestParameters;
+
+                HttpResponseMessage response;
+
+                using (ByteArrayContent content = new ByteArrayContent(array))
+                {
+                    content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+                    response = await client.PostAsync(uri, content);
+                }
+
+                if (response.IsSuccessStatusCode)
+                    return response.Headers.GetValues("Operation-Location").FirstOrDefault();
+
+                return null;
             }
-
-            // The response contains the URI to retrieve the result of the process.
-            if (response.IsSuccessStatusCode)
-                return response.Headers.GetValues("Operation-Location").FirstOrDefault();
-            else
+            catch (Exception e)
             {
                 return null;
             }

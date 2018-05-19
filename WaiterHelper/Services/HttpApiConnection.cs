@@ -36,7 +36,8 @@ namespace WaiterHelper.Services
         public async Task<T> PostAsync<T>(string url, object postData, CancellationToken cancellationToken = default(CancellationToken))
         {
             var requestMessage = CreateRequest(url, HttpMethod.Post, SerializeObject(postData));
-            var responseMessage = await httpClient.SendAsync(requestMessage, cancellationToken).ConfigureAwait(false);
+            requestMessage.Content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+            var responseMessage = await httpClient.SendAsync(requestMessage).ConfigureAwait(false);
 
             return await GetResponseContentAsync<T>(responseMessage);
         }

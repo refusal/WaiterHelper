@@ -3,6 +3,7 @@ using MvvmCross.Core.ViewModels;
 using System.Threading.Tasks;
 using WaiterHelper.Services;
 using System.Threading;
+using System.Linq;
 namespace WaiterHelper.ViewModels
 {
     public class SearchViewModel : ViewModelBase
@@ -23,8 +24,9 @@ namespace WaiterHelper.ViewModels
         private async Task GetResultText()
         {
             var locationResult = await recognizerService.RecognizeHandWrittenText(SignatureBytes);
-            Thread.Sleep(1000);
+            Thread.Sleep(5000);
             var textresult = await recognizerService.GetResult(locationResult);
+            ResultText = textresult.RecognitionResult.Lines.FirstOrDefault()?.Text;
         }
     }
 }
