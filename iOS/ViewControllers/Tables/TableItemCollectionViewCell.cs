@@ -22,6 +22,7 @@ namespace WaiterHelper.iOS.ViewControllers.Tables
             this.DelayBind(() =>
             {
                 var bindingSet = this.CreateBindingSet<TableItemCollectionViewCell, TableItemViewModel>();
+                bindingSet.Bind(ReserveButton).To(vm => vm.ReserveCommand);
                 bindingSet.Apply();
             });
         }

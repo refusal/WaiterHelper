@@ -213,6 +213,10 @@
     <Compile Include="Presentation\MvxDetailCustomPresentationAttribute.cs" />
     <Compile Include="Presentation\MvxRootChildPresentationAttribute.cs" />
     <Compile Include="Common\TouchDrawingImageViewBinding.cs" />
+    <Compile Include="ViewControllers\Tables\ReserveViewController.cs" />
+    <Compile Include="ViewControllers\Tables\ReserveViewController.designer.cs">
+      <DependentUpon>ReserveViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />

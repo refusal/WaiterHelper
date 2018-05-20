@@ -14,12 +14,44 @@ namespace WaiterHelper.iOS.ViewControllers.Tables
 	{
 		[Outlet]
 		UIKit.UIButton AddOrderButton { get; set; }
+
+		[Outlet]
+		UIKit.UILabel NumberLabel { get; set; }
+
+		[Outlet]
+		UIKit.UIButton ReserveButton { get; set; }
+
+		[Outlet]
+		UIKit.UILabel SmokingLabel { get; set; }
+
+		[Outlet]
+		UIKit.UILabel StatusLabel { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
 			if (AddOrderButton != null) {
 				AddOrderButton.Dispose ();
 				AddOrderButton = null;
+			}
+
+			if (StatusLabel != null) {
+				StatusLabel.Dispose ();
+				StatusLabel = null;
+			}
+
+			if (SmokingLabel != null) {
+				SmokingLabel.Dispose ();
+				SmokingLabel = null;
+			}
+
+			if (ReserveButton != null) {
+				ReserveButton.Dispose ();
+				ReserveButton = null;
+			}
+
+			if (NumberLabel != null) {
+				NumberLabel.Dispose ();
+				NumberLabel = null;
 			}
 		}
 	}

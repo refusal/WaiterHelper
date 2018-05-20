@@ -30,6 +30,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\Consts.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ResponceRecognizeModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\HttpApiConnection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ReserveViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
