@@ -24,17 +24,26 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Tables\TableItemViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SearchViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\RecognizerService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\ApiClient.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\IApiConnection.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\IRecognizerService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\Consts.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ResponceRecognizeModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\HttpApiConnection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ReserveViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\CacheProviderBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ConsoleLog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ILog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MenuService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\interface\IRecognizerService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\interface\IApiConnection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Consts.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\api\ApiClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\api\HttpApiConnection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\interface\IMenuService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Meal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\MockData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Tables\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\interface\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\api\" />
   </ItemGroup>
 </Project>
