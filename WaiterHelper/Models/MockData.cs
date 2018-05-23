@@ -58,12 +58,12 @@ namespace WaiterHelper.Models
         public static List<Meal> GetMeals()
         {
             var meals = new List<Meal>();
-            meals.Add(CreateMeal(1, "name", 10, 100, new[] { MealType.Drink }));
-            meals.Add(CreateMeal(1, "name", 10, 100, new[] { MealType.Drink }));
+            meals.Add(CreateMeal(1, "name", 10, 100, MealType.Drink));
+            meals.Add(CreateMeal(1, "name", 10, 100, MealType.Drink));
             return meals;
         }
 
-        private static Meal CreateMeal(int id, string name, int price, int weight, MealType[] mealTypes,
+        private static Meal CreateMeal(int id, string name, int price, int weight, MealType mealType,
                          string description = "", bool IsVegetarian = false, bool IsSpicy = false)
         {
             var meal = new Meal()
@@ -72,27 +72,14 @@ namespace WaiterHelper.Models
                 Name = name,
                 Price = price,
                 Weight = weight,
+                MealType = (int)mealType,
                 IsSpicy = IsSpicy,
                 IsVegetarian = IsVegetarian,
                 Description = description
             };
 
-            foreach (var item in mealTypes)
-            {
-                meal.MealTypes.Add(item);
-
-            }
-
             return meal;
         }
-
-        public static List<Meal> Meals = new List<Meal>()
-        {
-            new Meal()
-            {
-
-            }
-        };
         #endregion
     }
 }

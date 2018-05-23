@@ -6,6 +6,7 @@ using MvvmCross.iOS.Platform;
 using MvvmCross.Platform;
 using MvvmCross.Platform.Plugins;
 using UIKit;
+using WaiterHelper.Helpers;
 using WaiterHelper.iOS.Common;
 using WaiterHelper.iOS.Controls;
 using WaiterHelper.Services;
@@ -23,6 +24,8 @@ namespace WaiterHelper.iOS
             base.Initialize();
             Mvx.LazyConstructAndRegisterSingleton<IApiConnection, HttpApiConnection>();
             Mvx.LazyConstructAndRegisterSingleton<IRecognizerService, RecognizerService>();
+            Mvx.LazyConstructAndRegisterSingleton<IMenuService, MenuService>();
+            Mvx.LazyConstructAndRegisterSingleton<ILog, LogService>();
         }
 
         protected override IMvxApplication CreateApp()

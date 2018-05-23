@@ -38,6 +38,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\interface\IMenuService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Meal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MockData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\LogService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

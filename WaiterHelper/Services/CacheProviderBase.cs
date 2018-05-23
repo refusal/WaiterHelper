@@ -23,6 +23,7 @@ namespace WaiterHelper.Services
 
         static CacheProviderBase()
         {
+            RealmConfiguration.DefaultConfiguration.ShouldDeleteIfMigrationNeeded = true;
             serializeSettings = new JsonSerializerSettings
             {
                 DateFormatHandling = DateFormatHandling.IsoDateFormat,
