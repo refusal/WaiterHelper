@@ -237,6 +237,7 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <None Include="packages.config" />
+    <None Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

@@ -19,6 +19,7 @@ namespace WaiterHelper.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        [Ignored]
         public IList<MealType> MealTypes { get; }
         public double Price { get; set; }
         public string Description { get; set; }
