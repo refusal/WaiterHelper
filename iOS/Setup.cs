@@ -23,6 +23,7 @@ namespace WaiterHelper.iOS
             base.Initialize();
             Mvx.LazyConstructAndRegisterSingleton<IApiConnection, HttpApiConnection>();
             Mvx.LazyConstructAndRegisterSingleton<IRecognizerService, RecognizerService>();
+            Mvx.LazyConstructAndRegisterSingleton<IMenuService, MenuService>();
         }
 
         protected override IMvxApplication CreateApp()

@@ -85,14 +85,6 @@ namespace WaiterHelper.Models
 
             return meal;
         }
-
-        public static List<Meal> Meals = new List<Meal>()
-        {
-            new Meal()
-            {
-
-            }
-        }
         #endregion
     }
 }

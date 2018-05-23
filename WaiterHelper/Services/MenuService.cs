@@ -11,7 +11,7 @@ namespace WaiterHelper.Services
         public MenuService(ILog log) : base(log)
         {
             this.SaveRange(MockData.Tables, true);
-            this.SaveRange(MockData.Meals, true);
+            this.SaveRange(MockData.GetMeals(), true);
         }
 
         public IList<Meal> GetAllMeals()
