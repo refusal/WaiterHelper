@@ -4,6 +4,7 @@ using MvvmCross.Core.Navigation;
 using WaiterHelper.Helpers;
 using System.Threading.Tasks;
 using WaiterHelper.ViewModels.Tables;
+using WaiterHelper.ViewModels.Search;
 
 namespace WaiterHelper.ViewModels
 {
@@ -18,7 +19,7 @@ namespace WaiterHelper.ViewModels
 
         public MvxCommand ShowLeftCommand { get; set; }
 
-        public MenuViewModel MenuViewModel { get; set; }
+        public EquipmentSearchViewModel MenuViewModel { get; set; }
         public TablesCollectionViewModel TablesCollectionViewModel { get; set; }
         public SettingsViewModel SettingsViewModel { get; set; }
 
@@ -27,7 +28,7 @@ namespace WaiterHelper.ViewModels
             this.loader = loader;
             this.navigationService = navigationService;
 
-            MenuViewModel = loader.LoadViewModel<MenuViewModel>();
+            MenuViewModel = loader.LoadViewModel<EquipmentSearchViewModel>();
             TablesCollectionViewModel = loader.LoadViewModel<TablesCollectionViewModel>();
             SettingsViewModel = loader.LoadViewModel<SettingsViewModel>();
         }

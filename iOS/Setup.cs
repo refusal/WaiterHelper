@@ -5,6 +5,7 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
 using MvvmCross.Platform;
 using MvvmCross.Platform.Plugins;
+using NikoHealth.iOS.Bindings;
 using UIKit;
 using WaiterHelper.Helpers;
 using WaiterHelper.iOS.Common;
@@ -36,6 +37,7 @@ namespace WaiterHelper.iOS
         protected override void FillTargetFactories(IMvxTargetBindingFactoryRegistry registry)
         {
             base.FillTargetFactories(registry);
+            registry.RegisterFactory(new MvxCustomBindingFactory<MvxMultipleSelectionCollectionViewSource>(MultipleSelectionBinding.Name, (source) => new MultipleSelectionBinding(source)));
             registry.RegisterCustomBindingFactory<TouchDrawingImageView>(TouchDrawingImageViewBinding.Name, (arg) => new TouchDrawingImageViewBinding(arg));
         }
 

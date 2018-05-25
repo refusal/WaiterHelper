@@ -162,6 +162,9 @@
     <Reference Include="Realm.Sync">
       <HintPath>..\packages\Realm.2.2.0\lib\netstandard1.4\Realm.Sync.dll</HintPath>
     </Reference>
+    <Reference Include="PropertyChanged">
+      <HintPath>..\packages\PropertyChanged.Fody.2.2.1.0\lib\netstandard1.0\PropertyChanged.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -188,14 +191,6 @@
     <Compile Include="Main.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="ViewControllers\ViewControllerBase.cs" />
-    <Compile Include="ViewControllers\Menu\MenuViewController.cs" />
-    <Compile Include="ViewControllers\Menu\MenuViewController.designer.cs">
-      <DependentUpon>MenuViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewControllers\Menu\MenuItemCollectionViewCell.cs" />
-    <Compile Include="ViewControllers\Menu\MenuItemCollectionViewCell.designer.cs">
-      <DependentUpon>MenuItemCollectionViewCell.cs</DependentUpon>
-    </Compile>
     <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
     <Compile Include="ViewControllers\HomeRootViewController.cs" />
     <Compile Include="ViewControllers\Tables\TablesCollectionViewController.cs" />
@@ -232,6 +227,22 @@
     <Compile Include="ViewControllers\Tables\ReserveViewController.designer.cs">
       <DependentUpon>ReserveViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewControllers\Menu\CartItemTableViewCell.cs" />
+    <Compile Include="ViewControllers\Menu\CartItemTableViewCell.designer.cs" />
+    <Compile Include="ViewControllers\Menu\EquipmentSearchViewController.cs" />
+    <Compile Include="ViewControllers\Menu\EquipmentSearchViewController.designer.cs" />
+    <Compile Include="ViewControllers\Menu\SearchEquipmentPadCollectionViewCell.cs" />
+    <Compile Include="ViewControllers\Menu\SearchEquipmentPadCollectionViewCell.designer.cs" />
+    <Compile Include="ViewControllers\Menu\EquipmentSearchFilterView.cs" />
+    <Compile Include="ViewControllers\Menu\EquipmentSearchFilterView.designer.cs">
+      <DependentUpon>EquipmentSearchFilterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\MvxModalPresentationAttributeCustomTransition.cs" />
+    <Compile Include="Common\UIViewExtension.cs" />
+    <Compile Include="Common\MvxActionBasedSimpleTableViewSource.cs" />
+    <Compile Include="Common\MvxIndexedTableViewCell.cs" />
+    <Compile Include="Common\MvxMultiplySelectionCollectionViewSource.cs" />
+    <Compile Include="Common\MultiplySelectionBinding.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -241,11 +252,12 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
-    <InterfaceDefinition Include="ViewControllers\Menu\Menu.storyboard" />
     <InterfaceDefinition Include="ViewControllers\Tables\Tables.storyboard" />
     <InterfaceDefinition Include="ViewControllers\Settings\Settings.storyboard" />
     <InterfaceDefinition Include="Presentation\CustomSplitViewController.xib" />
     <InterfaceDefinition Include="ViewControllers\Search.storyboard" />
+    <InterfaceDefinition Include="ViewControllers\Menu\CartItemTableViewCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\Menu\SearchEquipment.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewControllers\Menu\" />

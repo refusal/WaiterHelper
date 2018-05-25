@@ -39,6 +39,17 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Meal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MockData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\LogService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Search\EquipmentSearchViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Search\SearchEquipmentItemViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Search\EquipmentSearchFilterViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SeachFilter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\BoolInversionConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\BoolToConditionalValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\CollectionCountConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\EmptyStringToPlaceholderConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\EmptyToBoolConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\FormattableToStringConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\StringFormatConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
@@ -46,5 +57,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Tables\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\interface\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\api\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Search\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Converter\" />
   </ItemGroup>
 </Project>

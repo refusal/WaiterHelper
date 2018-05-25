@@ -26,6 +26,31 @@ namespace WaiterHelper.iOS
         {
             switch (attribute)
             {
+                case MvxModalPresentationAttributeCustomTransition customModalAttribute:
+                    {
+                        // setup modal based on attribute
+                        if (attribute.WrapInNavigationController)
+                        {
+                            viewController = CreateNavigationController(viewController);
+                        }
+
+                        var transitionDelegate = new TransitioningDelegateAtLocation(new CGRect(customModalAttribute.StartXPosition / 100 * screenSize.Width, customModalAttribute.SpaceFromTop, customModalAttribute.StartWidthPresenter / 100 * screenSize.Width, screenSize.Height - customModalAttribute.SpaceFromBottom - customModalAttribute.SpaceFromTop),
+                                                                                     new CGRect(customModalAttribute.PresentationXPosition / 100 * screenSize.Width, customModalAttribute.SpaceFromTop, customModalAttribute.PresentationWidth / 100 * screenSize.Width, screenSize.Height - customModalAttribute.SpaceFromBottom - customModalAttribute.SpaceFromTop));
+
+                        viewController.ModalPresentationStyle = UIModalPresentationStyle.Custom;
+                        viewController.TransitioningDelegate = transitionDelegate;
+
+                        // Check if there is a modal already presented first. Otherwise use the window root
+                        var modalHost = ModalViewControllers.LastOrDefault() ?? _window.RootViewController;
+
+                        modalHost.PresentViewController(
+                            viewController,
+                            attribute.Animated,
+                            null);
+
+                        ModalViewControllers.Add(viewController);
+                        break;
+                    }
                 case MvxModalAutoSizePresentationAttribute customModalAttribute:
                     {
                         // setup modal based on attribute
@@ -60,6 +85,16 @@ namespace WaiterHelper.iOS
         public override void RegisterAttributeTypes()
         {
             base.RegisterAttributeTypes();
+
+            AttributeTypesToActionsDictionary.Add(typeof(MvxModalPresentationAttributeCustomTransition), new MvxPresentationAttributeAction
+            {
+                ShowAction = (vc, attribute, request) =>
+                {
+                    var viewController = (UIViewController)this.CreateViewControllerFor(request);
+                    ShowModalViewController(viewController, (MvxModalPresentationAttributeCustomTransition)attribute, request);
+                },
+                CloseAction = (viewModel, attribute) => CloseModalViewController(viewModel, (MvxModalPresentationAttribute)attribute)
+            });
 
             AttributeTypesToActionsDictionary.Add(typeof(MvxModalAutoSizePresentationAttribute), new MvxPresentationAttributeAction
             {
