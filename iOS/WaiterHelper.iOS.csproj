@@ -172,7 +172,6 @@
     <ImageAsset Include="Assets.xcassets\DishPlaceholder.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\DishPlaceholder.imageset\dish-img-placeholder-c16ed7ba04c396bc1f3f9172b33f8e410e1c6e6788503063631e00f70392d7d4.png" />
     <ImageAsset Include="Assets.xcassets\TablesTab.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\TablesTab.imageset\restaurant-table-and-chairs.png" />
     <ImageAsset Include="Assets.xcassets\MenuTab.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\MenuTab.imageset\restaurant-cutlery-symbol-of-a-cross.png" />
     <ImageAsset Include="Resources\Assets.xcassets\Image.imageset\Contents.json" />
@@ -185,6 +184,15 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\waiter-2 8.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\waiter-2 9.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\waiter-2 10.png" />
+    <ImageAsset Include="Assets.xcassets\shopping_cart.imageset\cart.pdf" />
+    <ImageAsset Include="Assets.xcassets\shopping_cart.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\filter.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\filter.imageset\filter.pdf" />
+    <ImageAsset Include="Assets.xcassets\icInfoButton.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icInfoButton.imageset\icInfoCopy-2.pdf" />
+    <ImageAsset Include="Assets.xcassets\TablesTab.imageset\restaurant-cutlery-symbol-of-a-cross.png" />
+    <ImageAsset Include="Assets.xcassets\draw.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\draw.imageset\group.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
@@ -228,11 +236,17 @@
       <DependentUpon>ReserveViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewControllers\Menu\CartItemTableViewCell.cs" />
-    <Compile Include="ViewControllers\Menu\CartItemTableViewCell.designer.cs" />
+    <Compile Include="ViewControllers\Menu\CartItemTableViewCell.designer.cs">
+    <DependentUpon>CartItemTableViewCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewControllers\Menu\EquipmentSearchViewController.cs" />
-    <Compile Include="ViewControllers\Menu\EquipmentSearchViewController.designer.cs" />
+    <Compile Include="ViewControllers\Menu\EquipmentSearchViewController.designer.cs">
+    <DependentUpon>EquipmentSearchViewController.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewControllers\Menu\SearchEquipmentPadCollectionViewCell.cs" />
-    <Compile Include="ViewControllers\Menu\SearchEquipmentPadCollectionViewCell.designer.cs" />
+    <Compile Include="ViewControllers\Menu\SearchEquipmentPadCollectionViewCell.designer.cs">
+    <DependentUpon>SearchEquipmentPadCollectionViewCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewControllers\Menu\EquipmentSearchFilterView.cs" />
     <Compile Include="ViewControllers\Menu\EquipmentSearchFilterView.designer.cs">
       <DependentUpon>EquipmentSearchFilterView.cs</DependentUpon>
@@ -243,6 +257,14 @@
     <Compile Include="Common\MvxIndexedTableViewCell.cs" />
     <Compile Include="Common\MvxMultiplySelectionCollectionViewSource.cs" />
     <Compile Include="Common\MultiplySelectionBinding.cs" />
+    <Compile Include="ViewControllers\Tables\AddOrderViewController.cs" />
+    <Compile Include="ViewControllers\Tables\AddOrderViewController.designer.cs">
+      <DependentUpon>AddOrderViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Tables\OrderMealTableViewCell.cs" />
+    <Compile Include="ViewControllers\Tables\OrderMealTableViewCell.designer.cs">
+      <DependentUpon>OrderMealTableViewCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -258,6 +280,7 @@
     <InterfaceDefinition Include="ViewControllers\Search.storyboard" />
     <InterfaceDefinition Include="ViewControllers\Menu\CartItemTableViewCell.xib" />
     <InterfaceDefinition Include="ViewControllers\Menu\SearchEquipment.storyboard" />
+    <InterfaceDefinition Include="ViewControllers\Tables\OrderMealTableViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewControllers\Menu\" />
@@ -270,6 +293,14 @@
     <Folder Include="Presentation\" />
     <Folder Include="Presentation\Transition\" />
     <Folder Include="Common\" />
+    <Folder Include="Assets.xcassets\shopping_cart.imageset\" />
+    <Folder Include="Assets.xcassets\filter.imageset\" />
+    <Folder Include="Assets.xcassets\icInfoButton.imageset\" />
+    <Folder Include="Assets.xcassets\draw.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dish_placeholder.png" />
+    <BundleResource Include="Resources\pasta-carbonara.jpg" />
   </ItemGroup>
   <Import Project="..\WaiterHelper\WaiterHelper.projitems" Label="Shared" Condition="Exists('..\WaiterHelper\WaiterHelper.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

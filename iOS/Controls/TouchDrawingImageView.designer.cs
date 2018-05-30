@@ -7,12 +7,11 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
-using UIKit;
 
-namespace WaiterHelper.iOS.ViewControllers.Settings
+namespace WaiterHelper.iOS.Controls
 {
-    [Register ("SettingsViewController")]
-    partial class SettingsViewController
+    [Register ("TouchDrawingImageView")]
+    partial class TouchDrawingImageView
     {
         void ReleaseDesignerOutlets ()
         {

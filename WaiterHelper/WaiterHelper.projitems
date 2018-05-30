@@ -50,6 +50,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Converter\EmptyToBoolConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converter\FormattableToStringConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converter\StringFormatConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\IntToCategoryConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AddOrderViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

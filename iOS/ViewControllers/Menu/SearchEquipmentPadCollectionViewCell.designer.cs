@@ -10,43 +10,15 @@ using System.CodeDom.Compiler;
 
 namespace WaiterHelper.iOS.ViewControllers.Menu
 {
-    [Register("SearchEquipmentPadCollectionViewCell")]
+    [Register ("SearchEquipmentPadCollectionViewCell")]
     partial class SearchEquipmentPadCollectionViewCell
     {
-        [Outlet]
-        UIKit.UILabel BundleTagLabel { get; set; }
-
-
         [Outlet]
         UIKit.UILabel CategoryLabel { get; set; }
 
 
         [Outlet]
         UIKit.UIImageView DeviceImageView { get; set; }
-
-
-        [Outlet]
-        UIKit.UILabel GroupLabel { get; set; }
-
-
-        [Outlet]
-        UIKit.UIView HcpcsHolderView { get; set; }
-
-
-        [Outlet]
-        UIKit.UILabel HcpcsLabel { get; set; }
-
-
-        [Outlet]
-        UIKit.UIButton HcpcsMoreButton { get; set; }
-
-
-        [Outlet]
-        UIKit.UILabel HcpcsTitleLabel { get; set; }
-
-
-        [Outlet]
-        UIKit.UILabel IdPartLabel { get; set; }
 
 
         [Outlet]
@@ -58,90 +30,69 @@ namespace WaiterHelper.iOS.ViewControllers.Menu
 
 
         [Outlet]
-        UIKit.UILabel ManufacturerLabel { get; set; }
+        UIKit.UILabel PriceLabel { get; set; }
+
+
+        [Outlet]
+        UIKit.UIView SpicyTagView { get; set; }
 
 
         [Outlet]
         UIKit.UILabel TitleLabel { get; set; }
 
-        void ReleaseDesignerOutlets()
-        {
-            if (BundleTagLabel != null)
-            {
-                BundleTagLabel.Dispose();
-                BundleTagLabel = null;
-            }
 
-            if (CategoryLabel != null)
-            {
-                CategoryLabel.Dispose();
+        [Outlet]
+        UIKit.UIView VeganTagView { get; set; }
+
+
+        [Outlet]
+        UIKit.UILabel WeightLabel { get; set; }
+
+        void ReleaseDesignerOutlets ()
+        {
+            if (CategoryLabel != null) {
+                CategoryLabel.Dispose ();
                 CategoryLabel = null;
             }
 
-            if (DeviceImageView != null)
-            {
-                DeviceImageView.Dispose();
+            if (DeviceImageView != null) {
+                DeviceImageView.Dispose ();
                 DeviceImageView = null;
             }
 
-            if (GroupLabel != null)
-            {
-                GroupLabel.Dispose();
-                GroupLabel = null;
-            }
-
-            if (HcpcsHolderView != null)
-            {
-                HcpcsHolderView.Dispose();
-                HcpcsHolderView = null;
-            }
-
-            if (HcpcsLabel != null)
-            {
-                HcpcsLabel.Dispose();
-                HcpcsLabel = null;
-            }
-
-            if (HcpcsMoreButton != null)
-            {
-                HcpcsMoreButton.Dispose();
-                HcpcsMoreButton = null;
-            }
-
-            if (HcpcsTitleLabel != null)
-            {
-                HcpcsTitleLabel.Dispose();
-                HcpcsTitleLabel = null;
-            }
-
-            if (IdPartLabel != null)
-            {
-                IdPartLabel.Dispose();
-                IdPartLabel = null;
-            }
-
-            if (ItemInfoButton != null)
-            {
-                ItemInfoButton.Dispose();
+            if (ItemInfoButton != null) {
+                ItemInfoButton.Dispose ();
                 ItemInfoButton = null;
             }
 
-            if (MainView != null)
-            {
-                MainView.Dispose();
+            if (MainView != null) {
+                MainView.Dispose ();
                 MainView = null;
             }
 
-            if (ManufacturerLabel != null)
-            {
-                ManufacturerLabel.Dispose();
-                ManufacturerLabel = null;
+            if (PriceLabel != null) {
+                PriceLabel.Dispose ();
+                PriceLabel = null;
             }
 
-            if (TitleLabel != null)
-            {
-                TitleLabel.Dispose();
+            if (SpicyTagView != null) {
+                SpicyTagView.Dispose ();
+                SpicyTagView = null;
+            }
+
+            if (TitleLabel != null) {
+                TitleLabel.Dispose ();
                 TitleLabel = null;
+            }
+
+            if (VeganTagView != null) {
+                VeganTagView.Dispose ();
+                VeganTagView = null;
+            }
+
+            if (WeightLabel != null) {
+                WeightLabel.Dispose ();
+                WeightLabel = null;
             }
         }
     }

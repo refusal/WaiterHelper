@@ -23,6 +23,10 @@ namespace WaiterHelper.iOS.ViewControllers.Menu
             this.DelayBind(() =>
             {
                 var bindingSet = this.CreateBindingSet<CartItemTableViewCell, SearchEquipmentItemViewModel>();
+                bindingSet.Bind(NameLabel).To(vm => vm.Meal.Name);
+                bindingSet.Bind(PriceLabel).To(vm => vm.Meal.Price);
+                bindingSet.Bind(WeightLabel).To(vm => vm.Meal.Weight);
+                bindingSet.Bind(QtyTextField).To(vm => vm.Count).OneWayToSource();
                 bindingSet.Apply();
             });
         }

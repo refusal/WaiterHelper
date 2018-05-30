@@ -15,15 +15,8 @@ namespace WaiterHelper.iOS.ViewControllers.Menu
     [MvxFromStoryboard("SearchEquipment")]
     public partial class EquipmentSearchFilterView : MvxViewController<EquipmentSearchFilterViewModel>
     {
-        private UIPopoverController manufacturerPopoverController;
-        private MvxPickerViewModel manufacturerPickerViewModel;
-
         private UIPopoverController categoryPopoverController;
         private MvxPickerViewModel categoryPickerViewModel;
-
-        private UIPopoverController groupPopoverController;
-        private MvxPickerViewModel groupPickerViewModel;
-
         public EquipmentSearchFilterView(IntPtr intPtr) : base(intPtr) { }
 
         public EquipmentSearchFilterView() : base("EquipmentSearchFilterView", null) { }
@@ -36,25 +29,19 @@ namespace WaiterHelper.iOS.ViewControllers.Menu
             InitializeAndBindPopovers(bindingSet);
 
             bindingSet.Bind(NameTextField).To(vm => vm.EquipmentSearchFilter.Name);
-            bindingSet.Bind(SerialLotTextField).To(vm => vm.EquipmentSearchFilter.SerialOrLotNumber);
             bindingSet.Bind(CategoryLabel).To(vm => vm.EquipmentSearchFilter.Category);
-            bindingSet.Bind(GroupLabel).To(vm => vm.EquipmentSearchFilter.Group);
-            bindingSet.Bind(ModelIdPartNumberTextField).To(vm => vm.EquipmentSearchFilter.IdPartNumber);
-            bindingSet.Bind(ManufacturerLabel).To(vm => vm.EquipmentSearchFilter.Manufacturer);
-            bindingSet.Bind(WarehouseTextField).To(vm => vm.EquipmentSearchFilter.Warehouse);
-            bindingSet.Bind(HcpcsTextField).To(vm => vm.EquipmentSearchFilter.Hcpcs);
-
-            // bindingSet.Bind(HcpcsHolder).For(view => view.Hidden)
-            //           .To(vm => vm.LotNumberVisible);
+            bindingSet.Bind(MinPriceTextField).To(vm => vm.EquipmentSearchFilter.MinPrice);
+            bindingSet.Bind(MaxPriceTextField).To(vm => vm.EquipmentSearchFilter.MaxPrice);
+            bindingSet.Bind(VeganSwitch).To(vm => vm.EquipmentSearchFilter.IsVegetarian);
+            bindingSet.Bind(NoSpicySwitch).To(vm => vm.EquipmentSearchFilter.IsNoSpicy);
+            bindingSet.Bind(PopUpButton).To(vm => vm.ShowSearchPopUp);
 
             bindingSet.Bind(ApplyButton).To(vm => vm.ApplyCommand);
             bindingSet.Bind(CloseButton).To(vm => vm.CloseCommand);
             bindingSet.Bind(ResetButton).To(vm => vm.ResetCommand);
-
             bindingSet.Apply();
 
             NameTextField.ClearButtonMode = UITextFieldViewMode.Always;
-            ModelIdPartNumberTextField.ClearButtonMode = UITextFieldViewMode.Always;
 
             ApplyButton.AddDefaultBorder(1, 4);
             ResetButton.AddDefaultBorder(1, 4);
@@ -65,31 +52,11 @@ namespace WaiterHelper.iOS.ViewControllers.Menu
             View.Layer.BorderWidth = 0.5f;
 
             CategoryViewHolder.AddDefaultBorder(1f, 4f, UIColor.FromRGB(213, 217, 224).CGColor);
-            GroupViewHolder.AddDefaultBorder(1f, 4f, UIColor.FromRGB(213, 217, 224).CGColor);
-            ManufacturerViewHolder.AddDefaultBorder(1f, 4f, UIColor.FromRGB(213, 217, 224).CGColor);
         }
 
         private void InitializeAndBindPopovers(MvxFluentBindingDescriptionSet<EquipmentSearchFilterView, EquipmentSearchFilterViewModel> bindingSet)
         {
-            (manufacturerPopoverController, manufacturerPickerViewModel) = CreatePopover(ManufacturerArrowView);
             (categoryPopoverController, categoryPickerViewModel) = CreatePopover(CategoryArrowView);
-            (groupPopoverController, groupPickerViewModel) = CreatePopover(GroupArrowView);
-
-            bindingSet.Bind(groupPickerViewModel).For(pickerVM => pickerVM.ItemsSource).To(vm => vm.EquipmentSearchFilter.AvailableGroups);
-            bindingSet.Bind(groupPickerViewModel).For(pickerVM => pickerVM.SelectedItem).To(vm => vm.EquipmentSearchFilter.Group);
-            GroupViewHolder.AddGestureRecognizer(new UITapGestureRecognizer(() =>
-            {
-                groupPopoverController.PresentFromRect(GroupViewHolder.Frame, GroupViewHolder, UIPopoverArrowDirection.Up, true);
-                GroupArrowView.Transform = CGAffineTransform.MakeRotation((nfloat)Math.PI * 2);
-            }));
-
-            bindingSet.Bind(manufacturerPickerViewModel).For(pickerVM => pickerVM.ItemsSource).To(vm => vm.EquipmentSearchFilter.AvailableManufacturers);
-            bindingSet.Bind(manufacturerPickerViewModel).For(pickerVM => pickerVM.SelectedItem).To(vm => vm.EquipmentSearchFilter.Manufacturer);
-            ManufacturerViewHolder.AddGestureRecognizer(new UITapGestureRecognizer(() =>
-            {
-                manufacturerPopoverController.PresentFromRect(ManufacturerViewHolder.Frame, ManufacturerViewHolder, UIPopoverArrowDirection.Up, true);
-                ManufacturerArrowView.Transform = CGAffineTransform.MakeRotation((nfloat)Math.PI * 2);
-            }));
 
             bindingSet.Bind(categoryPickerViewModel).For(pickerVM => pickerVM.ItemsSource).To(vm => vm.EquipmentSearchFilter.AvailableCategories);
             bindingSet.Bind(categoryPickerViewModel).For(pickerVM => pickerVM.SelectedItem).To(vm => vm.EquipmentSearchFilter.Category);

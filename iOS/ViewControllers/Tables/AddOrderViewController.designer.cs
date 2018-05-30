@@ -10,9 +10,13 @@ using System.CodeDom.Compiler;
 
 namespace WaiterHelper.iOS.ViewControllers.Tables
 {
-    [Register ("ReserveViewController")]
-    partial class ReserveViewController
+    [Register ("AddOrderViewController")]
+    partial class AddOrderViewController
     {
+        [Outlet]
+        UIKit.UIButton AddMealButton { get; set; }
+
+
         [Outlet]
         UIKit.UIButton CancelButton { get; set; }
 
@@ -26,11 +30,11 @@ namespace WaiterHelper.iOS.ViewControllers.Tables
 
 
         [Outlet]
-        UIKit.UIDatePicker DatePicker { get; set; }
+        UIKit.UITextField CountOfClientsEditText { get; set; }
 
 
         [Outlet]
-        UIKit.UITextField NameEditText { get; set; }
+        UIKit.UITableView MealsTableView { get; set; }
 
 
         [Outlet]
@@ -38,6 +42,11 @@ namespace WaiterHelper.iOS.ViewControllers.Tables
 
         void ReleaseDesignerOutlets ()
         {
+            if (AddMealButton != null) {
+                AddMealButton.Dispose ();
+                AddMealButton = null;
+            }
+
             if (CancelButton != null) {
                 CancelButton.Dispose ();
                 CancelButton = null;
@@ -53,14 +62,14 @@ namespace WaiterHelper.iOS.ViewControllers.Tables
                 ConfirmButton = null;
             }
 
-            if (DatePicker != null) {
-                DatePicker.Dispose ();
-                DatePicker = null;
+            if (CountOfClientsEditText != null) {
+                CountOfClientsEditText.Dispose ();
+                CountOfClientsEditText = null;
             }
 
-            if (NameEditText != null) {
-                NameEditText.Dispose ();
-                NameEditText = null;
+            if (MealsTableView != null) {
+                MealsTableView.Dispose ();
+                MealsTableView = null;
             }
 
             if (NotesTextView != null) {

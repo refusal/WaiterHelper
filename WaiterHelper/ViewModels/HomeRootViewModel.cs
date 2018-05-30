@@ -21,7 +21,6 @@ namespace WaiterHelper.ViewModels
 
         public EquipmentSearchViewModel MenuViewModel { get; set; }
         public TablesCollectionViewModel TablesCollectionViewModel { get; set; }
-        public SettingsViewModel SettingsViewModel { get; set; }
 
         public HomeRootViewModel(IMvxViewModelLoader loader, IMvxNavigationService navigationService)
         {
@@ -30,7 +29,6 @@ namespace WaiterHelper.ViewModels
 
             MenuViewModel = loader.LoadViewModel<EquipmentSearchViewModel>();
             TablesCollectionViewModel = loader.LoadViewModel<TablesCollectionViewModel>();
-            SettingsViewModel = loader.LoadViewModel<SettingsViewModel>();
         }
 
         public override async Task Initialize()
@@ -39,7 +37,6 @@ namespace WaiterHelper.ViewModels
 
             await MenuViewModel.Initialize();
             await TablesCollectionViewModel.Initialize();
-            await SettingsViewModel.Initialize();
         }
     }
 }

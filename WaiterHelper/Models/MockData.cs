@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using Foundation;
+
 namespace WaiterHelper.Models
 {
     public static class MockData
@@ -58,8 +60,11 @@ namespace WaiterHelper.Models
         public static List<Meal> GetMeals()
         {
             var meals = new List<Meal>();
-            meals.Add(CreateMeal(1, "name", 10, 100, MealType.Drink));
-            meals.Add(CreateMeal(1, "name", 10, 100, MealType.Drink));
+            meals.Add(CreateMeal(1, "Caprese Salad with Pesto Sauce", 15, 200, MealType.Salad));
+            meals.Add(CreateMeal(1, "Panzenella", 20, 150, MealType.Salad));
+            meals.Add(CreateMeal(1, "Bruschetta", 10, 100, MealType.Snack, IsVegetarian: false, IsSpicy: true));
+            meals.Add(CreateMeal(1, "Focaccia Bread", 5, 140, MealType.Snack, IsVegetarian: true));
+            meals.Add(CreateMeal(1, "Pasta Carbonara", 30, 300, MealType.Pasta));
             return meals;
         }
 
@@ -75,7 +80,8 @@ namespace WaiterHelper.Models
                 MealType = (int)mealType,
                 IsSpicy = IsSpicy,
                 IsVegetarian = IsVegetarian,
-                Description = description
+                Description = description,
+                ImagePath = "res:" + NSBundle.MainBundle.PathForResource("pasta-carbonara", "jpg")
             };
 
             return meal;

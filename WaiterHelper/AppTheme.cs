@@ -8,7 +8,7 @@ namespace WaiterHelper
     {
         public static readonly MvxColor ColorPrimary = "#2a3f54".FromHex();
         public static readonly MvxColor ColorPrimaryDark = "#223343".FromHex();
-        public static readonly MvxColor ColorAccent = "#FFDC48".FromHex();
+        public static readonly MvxColor ColorAccent = "#48b2ff".FromHex();
         public static readonly MvxColor LightGray = "#f0f3f7".FromHex();
         public static readonly MvxColor White = "#ffffff".FromHex();
         public static readonly MvxColor Gray = "#AAe2e2e2".FromHex();

@@ -124,6 +124,7 @@ namespace WaiterHelper.ViewModels.Search
         private void ChangeCartVisibility()
         {
             CartOpened = !CartOpened;
+            RaisePropertyChanged(() => CartOpened);
         }
 
         private Task LoadSearchResultAsync()
@@ -159,7 +160,7 @@ namespace WaiterHelper.ViewModels.Search
         }
 
         private IEnumerable<SearchEquipmentItemViewModel> GetItemViewModels(IEnumerable<Meal> meals)
-        => meals.Select(equipment => new SearchEquipmentItemViewModel(navigationService));
+        => meals.Select(meal => new SearchEquipmentItemViewModel(meal, navigationService));
 
         private void UpdateFilterOptions()
         {

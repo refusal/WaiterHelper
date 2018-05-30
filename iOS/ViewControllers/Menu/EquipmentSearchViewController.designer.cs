@@ -1,15 +1,16 @@
 // WARNING
 //
-// This file has been generated automatically by Visual Studio to store outlets and
-// actions made in the UI designer. If it is removed, they will be lost.
-// Manual changes to this file may not be handled correctly.
+// This file has been generated automatically by Visual Studio from the outlets and
+// actions declared in your storyboard file.
+// Manual changes to this file will not be maintained.
 //
 using Foundation;
+using System;
 using System.CodeDom.Compiler;
 
 namespace WaiterHelper.iOS.ViewControllers.Menu
 {
-    [Register("EquipmentSearchViewController")]
+    [Register ("EquipmentSearchViewController")]
     partial class EquipmentSearchViewController
     {
         [Outlet]
@@ -66,114 +67,71 @@ namespace WaiterHelper.iOS.ViewControllers.Menu
         [Outlet]
         UIKit.UILabel SerialNumberCartHeaderLabel { get; set; }
 
-        void ReleaseDesignerOutlets()
+        void ReleaseDesignerOutlets ()
         {
-            if (ActivityLoader != null)
-            {
-                ActivityLoader.Dispose();
+            if (ActivityLoader != null) {
+                ActivityLoader.Dispose ();
                 ActivityLoader = null;
             }
 
-            if (BarcodeButton != null)
-            {
-                BarcodeButton.Dispose();
-                BarcodeButton = null;
-            }
-
-            if (BarcodeViewHolder != null)
-            {
-                BarcodeViewHolder.Dispose();
-                BarcodeViewHolder = null;
-            }
-
-            if (CancelButton != null)
-            {
-                CancelButton.Dispose();
+            if (CancelButton != null) {
+                CancelButton.Dispose ();
                 CancelButton = null;
             }
 
-            if (CartButton != null)
-            {
-                CartButton.Dispose();
+            if (CartButton != null) {
+                CartButton.Dispose ();
                 CartButton = null;
             }
 
-            if (CartEmptyView != null)
-            {
-                CartEmptyView.Dispose();
+            if (CartEmptyView != null) {
+                CartEmptyView.Dispose ();
                 CartEmptyView = null;
             }
 
-            if (CartTableView != null)
-            {
-                CartTableView.Dispose();
+            if (CartTableView != null) {
+                CartTableView.Dispose ();
                 CartTableView = null;
             }
 
-            if (CartView != null)
-            {
-                CartView.Dispose();
+            if (CartView != null) {
+                CartView.Dispose ();
                 CartView = null;
             }
 
-            if (FilterButton != null)
-            {
-                FilterButton.Dispose();
+            if (EmptyView != null) {
+                EmptyView.Dispose ();
+                EmptyView = null;
+            }
+
+            if (FilterButton != null) {
+                FilterButton.Dispose ();
                 FilterButton = null;
             }
 
-            if (LoadView != null)
-            {
-                LoadView.Dispose();
+            if (LoadView != null) {
+                LoadView.Dispose ();
                 LoadView = null;
             }
 
-            if (LotNumberCartHeaderLabel != null)
-            {
-                LotNumberCartHeaderLabel.Dispose();
-                LotNumberCartHeaderLabel = null;
-            }
-
-            if (QtyCartHeaderLabel != null)
-            {
-                QtyCartHeaderLabel.Dispose();
-                QtyCartHeaderLabel = null;
-            }
-
-            if (SaveButton != null)
-            {
-                SaveButton.Dispose();
+            if (SaveButton != null) {
+                SaveButton.Dispose ();
                 SaveButton = null;
             }
 
-            if (SearchCollectionView != null)
-            {
-                SearchCollectionView.Dispose();
+            if (SearchCollectionView != null) {
+                SearchCollectionView.Dispose ();
                 SearchCollectionView = null;
             }
 
-            if (SelectedItemsCountLabel != null)
-            {
-                SelectedItemsCountLabel.Dispose();
+            if (SelectedItemsCountLabel != null) {
+                SelectedItemsCountLabel.Dispose ();
                 SelectedItemsCountLabel = null;
             }
 
-            if (SelectedLabel != null)
-            {
-                SelectedLabel.Dispose();
+            if (SelectedLabel != null) {
+                SelectedLabel.Dispose ();
                 SelectedLabel = null;
-            }
-
-            if (SerialNumberCartHeaderLabel != null)
-            {
-                SerialNumberCartHeaderLabel.Dispose();
-                SerialNumberCartHeaderLabel = null;
-            }
-
-            if (EmptyView != null)
-            {
-                EmptyView.Dispose();
-                EmptyView = null;
             }
         }
     }

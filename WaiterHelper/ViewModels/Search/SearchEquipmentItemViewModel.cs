@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
+using WaiterHelper.Models;
 
 namespace WaiterHelper.ViewModels.Search
 {
@@ -10,9 +11,13 @@ namespace WaiterHelper.ViewModels.Search
     {
         private readonly IMvxNavigationService navigationService;
 
-        public SearchEquipmentItemViewModel(IMvxNavigationService navigationService)
+        public Meal Meal { get; private set; }
+        public int Count { get; set; }
+
+        public SearchEquipmentItemViewModel(Meal meal, IMvxNavigationService navigationService)
         {
             this.navigationService = navigationService;
+            Meal = meal;
 
             //ShowDetailsCommand = new MvxAsyncCommand(ShowDetailsAsync);
         }

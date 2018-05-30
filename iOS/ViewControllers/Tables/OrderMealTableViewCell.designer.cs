@@ -7,22 +7,23 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
+using UIKit;
 
-namespace WaiterHelper.iOS.ViewControllers.Menu
+namespace WaiterHelper.iOS.ViewControllers.Tables
 {
-    [Register ("CartItemTableViewCell")]
-    partial class CartItemTableViewCell
+    [Register ("OrderMealTableViewCell")]
+    partial class OrderMealTableViewCell
     {
         [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel NameLabel { get; set; }
 
         [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel PriceLabel { get; set; }
 
         [Outlet]
-        UIKit.UITextField QtyTextField { get; set; }
-
-        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel WeightLabel { get; set; }
 
         void ReleaseDesignerOutlets ()
@@ -35,11 +36,6 @@ namespace WaiterHelper.iOS.ViewControllers.Menu
             if (PriceLabel != null) {
                 PriceLabel.Dispose ();
                 PriceLabel = null;
-            }
-
-            if (QtyTextField != null) {
-                QtyTextField.Dispose ();
-                QtyTextField = null;
             }
 
             if (WeightLabel != null) {

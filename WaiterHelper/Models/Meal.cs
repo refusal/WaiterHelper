@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Realms;
+using System;
 
 namespace WaiterHelper.Models
 {
@@ -25,6 +26,7 @@ namespace WaiterHelper.Models
         public int Weight { get; set; }
         public bool IsVegetarian { get; set; }
         public bool IsSpicy { get; set; }
+        public string ImagePath { get; set; }
     }
 
     public class Table : RealmObject
@@ -34,5 +36,13 @@ namespace WaiterHelper.Models
         public int CurrentCount { get; set; }
         public bool IsSmoking { get; set; }
         public bool IsReserved { get; set; }
+    }
+
+    public class Order : RealmObject
+    {
+        public string Id { get; set; }
+        public IList<Meal> Meals { get; }
+        public DateTimeOffset Date { get; set; }
+        public int TableNumber { get; set; }
     }
 }

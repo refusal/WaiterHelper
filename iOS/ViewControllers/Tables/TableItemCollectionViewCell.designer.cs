@@ -1,58 +1,67 @@
 // WARNING
 //
-// This file has been generated automatically by Visual Studio to store outlets and
-// actions made in the UI designer. If it is removed, they will be lost.
-// Manual changes to this file may not be handled correctly.
+// This file has been generated automatically by Visual Studio from the outlets and
+// actions declared in your storyboard file.
+// Manual changes to this file will not be maintained.
 //
 using Foundation;
+using System;
 using System.CodeDom.Compiler;
 
 namespace WaiterHelper.iOS.ViewControllers.Tables
 {
-	[Register ("TableItemCollectionViewCell")]
-	partial class TableItemCollectionViewCell
-	{
-		[Outlet]
-		UIKit.UIButton AddOrderButton { get; set; }
+    [Register ("TableItemCollectionViewCell")]
+    partial class TableItemCollectionViewCell
+    {
+        [Outlet]
+        UIKit.UIButton AddOrderButton { get; set; }
 
-		[Outlet]
-		UIKit.UILabel NumberLabel { get; set; }
+        [Outlet]
+        UIKit.UIView HolderView { get; set; }
 
-		[Outlet]
-		UIKit.UIButton ReserveButton { get; set; }
+        [Outlet]
+        UIKit.UILabel MaxCountLabel { get; set; }
 
-		[Outlet]
-		UIKit.UILabel SmokingLabel { get; set; }
+        [Outlet]
+        UIKit.UILabel NumberLabel { get; set; }
 
-		[Outlet]
-		UIKit.UILabel StatusLabel { get; set; }
-		
-		void ReleaseDesignerOutlets ()
-		{
-			if (AddOrderButton != null) {
-				AddOrderButton.Dispose ();
-				AddOrderButton = null;
-			}
+        [Outlet]
+        UIKit.UIButton ReserveButton { get; set; }
 
-			if (StatusLabel != null) {
-				StatusLabel.Dispose ();
-				StatusLabel = null;
-			}
+        [Outlet]
+        UIKit.UILabel SmokingLabel { get; set; }
 
-			if (SmokingLabel != null) {
-				SmokingLabel.Dispose ();
-				SmokingLabel = null;
-			}
+        void ReleaseDesignerOutlets ()
+        {
+            if (AddOrderButton != null) {
+                AddOrderButton.Dispose ();
+                AddOrderButton = null;
+            }
 
-			if (ReserveButton != null) {
-				ReserveButton.Dispose ();
-				ReserveButton = null;
-			}
+            if (HolderView != null) {
+                HolderView.Dispose ();
+                HolderView = null;
+            }
 
-			if (NumberLabel != null) {
-				NumberLabel.Dispose ();
-				NumberLabel = null;
-			}
-		}
-	}
+            if (MaxCountLabel != null) {
+                MaxCountLabel.Dispose ();
+                MaxCountLabel = null;
+            }
+
+            if (NumberLabel != null) {
+                NumberLabel.Dispose ();
+                NumberLabel = null;
+            }
+
+            if (ReserveButton != null) {
+                ReserveButton.Dispose ();
+                ReserveButton = null;
+            }
+
+            if (SmokingLabel != null) {
+                SmokingLabel.Dispose ();
+                SmokingLabel = null;
+            }
+        }
+    }
 }
