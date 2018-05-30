@@ -261,9 +261,9 @@
     <Compile Include="ViewControllers\Tables\AddOrderViewController.designer.cs">
       <DependentUpon>AddOrderViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewControllers\Tables\OrderMealTableViewCell.cs" />
-    <Compile Include="ViewControllers\Tables\OrderMealTableViewCell.designer.cs">
-      <DependentUpon>OrderMealTableViewCell.cs</DependentUpon>
+    <Compile Include="ViewControllers\Tables\OrderMealItemTableViewCell.cs" />
+    <Compile Include="ViewControllers\Tables\OrderMealItemTableViewCell.designer.cs">
+      <DependentUpon>OrderMealItemTableViewCell.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -280,7 +280,7 @@
     <InterfaceDefinition Include="ViewControllers\Search.storyboard" />
     <InterfaceDefinition Include="ViewControllers\Menu\CartItemTableViewCell.xib" />
     <InterfaceDefinition Include="ViewControllers\Menu\SearchEquipment.storyboard" />
-    <InterfaceDefinition Include="ViewControllers\Tables\OrderMealTableViewCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\Tables\OrderMealItemTableViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewControllers\Menu\" />

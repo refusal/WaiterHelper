@@ -28,6 +28,7 @@ namespace WaiterHelper.iOS.ViewControllers.Tables
             {
                 var bindingSet = this.CreateBindingSet<TableItemCollectionViewCell, TableItemViewModel>();
                 bindingSet.Bind(ReserveButton).To(vm => vm.ReserveCommand);
+                bindingSet.Bind(AddOrderButton).To(vm => vm.AddOrderCommand);
                 bindingSet.Bind(NumberLabel).To(vm => vm.Table.Number);
                 bindingSet.Bind(MaxCountLabel).To(vm => vm.Table.MaxCount);
                 bindingSet.Bind(SmokingLabel).To(vm => vm.Table.IsSmoking).WithConversion(converter);

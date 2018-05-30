@@ -20,8 +20,6 @@ namespace WaiterHelper.ViewModels
         {
             this.menuService = menuService;
             this.mvxNavigationService = mvxNavigationService;
-
-            Meals = new MvxObservableCollection<SearchEquipmentItemViewModel>();
         }
 
         public override Task Initialize()
